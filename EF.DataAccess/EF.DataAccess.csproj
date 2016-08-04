@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7083B187-F9DD-474C-92D9-57A79C367C50}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EF.DataAccess</RootNamespace>
+    <AssemblyName>EF.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Contexts\AlbumContext.cs" />
+    <Compile Include="Contexts\BreakAwayContext.cs" />
+    <Compile Include="Contexts\BreakAwayContextFluent.cs" />
+    <Compile Include="Contexts\PoetryModelContext.cs" />
+    <Compile Include="EntityTypeConfigurations\Baga_Fluent\DestinationConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\Baga_Fluent\LodgingConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\Baga_Fluent\PersonConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\Baga_Fluent\TripConfiguration.cs" />
+    <Compile Include="MigrationsBagaFluent\201607021543295_Migration0.cs" />
+    <Compile Include="MigrationsBagaFluent\201607021543295_Migration0.Designer.cs">
+      <DependentUpon>201607021543295_Migration0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsBagaFluent\201607031242056_Migration1.cs" />
+    <Compile Include="MigrationsBagaFluent\201607031242056_Migration1.Designer.cs">
+      <DependentUpon>201607031242056_Migration1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsBagaFluent\201607051548208_Migration3.cs" />
+    <Compile Include="MigrationsBagaFluent\201607051548208_Migration3.Designer.cs">
+      <DependentUpon>201607051548208_Migration3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsBagaFluent\201607051557274_OptimisticConcurrency.cs" />
+    <Compile Include="MigrationsBagaFluent\201607051557274_OptimisticConcurrency.Designer.cs">
+      <DependentUpon>201607051557274_OptimisticConcurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsBagaFluent\201607051613078_PrecisionAndScale.cs" />
+    <Compile Include="MigrationsBagaFluent\201607051613078_PrecisionAndScale.Designer.cs">
+      <DependentUpon>201607051613078_PrecisionAndScale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsBagaFluent\201607051804267_SimpleComplexType.cs" />
+    <Compile Include="MigrationsBagaFluent\201607051804267_SimpleComplexType.Designer.cs">
+      <DependentUpon>201607051804267_SimpleComplexType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsBagaFluent\Configuration.cs" />
+    <Compile Include="MigrationsBaga\201607021511294_Migration0.cs" />
+    <Compile Include="MigrationsBaga\201607021511294_Migration0.Designer.cs">
+      <DependentUpon>201607021511294_Migration0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsBaga\201607021517370_Migration1.cs" />
+    <Compile Include="MigrationsBaga\201607021517370_Migration1.Designer.cs">
+      <DependentUpon>201607021517370_Migration1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsBaga\201607031237035_Migration2.cs" />
+    <Compile Include="MigrationsBaga\201607031237035_Migration2.Designer.cs">
+      <DependentUpon>201607031237035_Migration2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsBaga\201607051537005_Migration3.cs" />
+    <Compile Include="MigrationsBaga\201607051537005_Migration3.Designer.cs">
+      <DependentUpon>201607051537005_Migration3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsBaga\201607051557057_OptimisticConcurrency.cs" />
+    <Compile Include="MigrationsBaga\201607051557057_OptimisticConcurrency.Designer.cs">
+      <DependentUpon>201607051557057_OptimisticConcurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsBaga\201607051804054_SimpleComplexType.cs" />
+    <Compile Include="MigrationsBaga\201607051804054_SimpleComplexType.Designer.cs">
+      <DependentUpon>201607051804054_SimpleComplexType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsBaga\201607051813016_ComplexComplexType.cs" />
+    <Compile Include="MigrationsBaga\201607051813016_ComplexComplexType.Designer.cs">
+      <DependentUpon>201607051813016_ComplexComplexType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsBaga\201607051856268_ForeignKeyWithId.cs" />
+    <Compile Include="MigrationsBaga\201607051856268_ForeignKeyWithId.Designer.cs">
+      <DependentUpon>201607051856268_ForeignKeyWithId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsBaga\201607051858069_InverseProperty.cs" />
+    <Compile Include="MigrationsBaga\201607051858069_InverseProperty.Designer.cs">
+      <DependentUpon>201607051858069_InverseProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsBaga\Configuration.cs" />
+    <Compile Include="Migrations\Albums\201607201745327_Migration0.cs" />
+    <Compile Include="Migrations\Albums\201607201745327_Migration0.Designer.cs">
+      <DependentUpon>201607201745327_Migration0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Albums\201607202210000_Migration1.cs" />
+    <Compile Include="Migrations\Albums\201607202210000_Migration1.Designer.cs">
+      <DependentUpon>201607202210000_Migration1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Albums\Configuration.cs" />
+    <Compile Include="Migrations\Poetry\201607071145142_Migration0.cs" />
+    <Compile Include="Migrations\Poetry\201607071145142_Migration0.Designer.cs">
+      <DependentUpon>201607071145142_Migration0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Poetry\201607071151275_Migration1.cs" />
+    <Compile Include="Migrations\Poetry\201607071151275_Migration1.Designer.cs">
+      <DependentUpon>201607071151275_Migration1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Poetry\201607091514329_Migration2.cs" />
+    <Compile Include="Migrations\Poetry\201607091514329_Migration2.Designer.cs">
+      <DependentUpon>201607091514329_Migration2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Poetry\201607091713554_Migration3.cs" />
+    <Compile Include="Migrations\Poetry\201607091713554_Migration3.Designer.cs">
+      <DependentUpon>201607091713554_Migration3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Poetry\201607091718288_Migration4.cs" />
+    <Compile Include="Migrations\Poetry\201607091718288_Migration4.Designer.cs">
+      <DependentUpon>201607091718288_Migration4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Poetry\Configuration.cs" />
+    <Compile Include="Models\Albums\Album.cs" />
+    <Compile Include="Models\Albums\Artist.cs" />
+    <Compile Include="Models\Albums\PictureCategory.cs" />
+    <Compile Include="Models\Baga\Address.cs" />
+    <Compile Include="Models\Baga\Destination.cs" />
+    <Compile Include="Models\Baga\Lodging.cs" />
+    <Compile Include="Models\Baga\Measurement.cs" />
+    <Compile Include="Models\Baga\Person.cs" />
+    <Compile Include="Models\Baga\PersonalInfo.cs" />
+    <Compile Include="Models\Baga\Trip.cs" />
+    <Compile Include="Models\Baga_Fluent\Address.cs" />
+    <Compile Include="Models\Baga_Fluent\Destination.cs" />
+    <Compile Include="Models\Baga_Fluent\Lodging.cs" />
+    <Compile Include="Models\Baga_Fluent\Person.cs" />
+    <Compile Include="Models\Baga_Fluent\Trip.cs" />
+    <Compile Include="Models\Poems\Meter.cs" />
+    <Compile Include="Models\Poems\Poem.cs" />
+    <Compile Include="Models\Poems\Poet.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MigrationsBagaFluent\201607021543295_Migration0.resx">
+      <DependentUpon>201607021543295_Migration0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsBagaFluent\201607031242056_Migration1.resx">
+      <DependentUpon>201607031242056_Migration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsBagaFluent\201607051548208_Migration3.resx">
+      <DependentUpon>201607051548208_Migration3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsBagaFluent\201607051557274_OptimisticConcurrency.resx">
+      <DependentUpon>201607051557274_OptimisticConcurrency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsBagaFluent\201607051613078_PrecisionAndScale.resx">
+      <DependentUpon>201607051613078_PrecisionAndScale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsBagaFluent\201607051804267_SimpleComplexType.resx">
+      <DependentUpon>201607051804267_SimpleComplexType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsBaga\201607021511294_Migration0.resx">
+      <DependentUpon>201607021511294_Migration0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsBaga\201607021517370_Migration1.resx">
+      <DependentUpon>201607021517370_Migration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsBaga\201607031237035_Migration2.resx">
+      <DependentUpon>201607031237035_Migration2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsBaga\201607051537005_Migration3.resx">
+      <DependentUpon>201607051537005_Migration3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsBaga\201607051557057_OptimisticConcurrency.resx">
+      <DependentUpon>201607051557057_OptimisticConcurrency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsBaga\201607051804054_SimpleComplexType.resx">
+      <DependentUpon>201607051804054_SimpleComplexType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsBaga\201607051813016_ComplexComplexType.resx">
+      <DependentUpon>201607051813016_ComplexComplexType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsBaga\201607051856268_ForeignKeyWithId.resx">
+      <DependentUpon>201607051856268_ForeignKeyWithId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsBaga\201607051858069_InverseProperty.resx">
+      <DependentUpon>201607051858069_InverseProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Albums\201607201745327_Migration0.resx">
+      <DependentUpon>201607201745327_Migration0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Albums\201607202210000_Migration1.resx">
+      <DependentUpon>201607202210000_Migration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Poetry\201607071145142_Migration0.resx">
+      <DependentUpon>201607071145142_Migration0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Poetry\201607071151275_Migration1.resx">
+      <DependentUpon>201607071151275_Migration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Poetry\201607091514329_Migration2.resx">
+      <DependentUpon>201607091514329_Migration2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Poetry\201607091713554_Migration3.resx">
+      <DependentUpon>201607091713554_Migration3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Poetry\201607091718288_Migration4.resx">
+      <DependentUpon>201607091718288_Migration4.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
